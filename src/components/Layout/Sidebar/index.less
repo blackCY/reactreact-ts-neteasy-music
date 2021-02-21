@@ -1,0 +1,58 @@
+@import "../../../styles/constants.less";
+@import "../../../styles/colors.less";
+
+.layout-sidebar {
+  width: @sidebarWidth;
+  height: 100%;
+  margin-top: @headerHeight;
+  display: flex;
+  flex-direction: column;
+  background-color: #eaeaea;
+  overflow: hidden;
+  z-index: 3;
+  position: fixed;
+
+  &-content {
+    height: 100%;
+    // overflow: scroll;
+    .sidebar-content-block {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-user {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    .sidebar-user-avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 50%;
+      background-color: #ccc;
+      cursor: pointer;
+      color: rgb(220, 220, 220);
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .sidebar-user-name {
+      color: rgb(69, 69, 69);
+      cursor: default;
+      display: flex;
+      span:last-child {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

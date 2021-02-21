@@ -1,0 +1,50 @@
+@import "../../../../styles/colors.less";
+
+.songlist-categories {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .all {
+    cursor: default;
+
+    &:hover {
+      color: @red;
+    }
+  }
+
+  .hotCats {
+    display: flex;
+    align-items: center;
+  }
+
+  .tag {
+    margin: 0 10px 5px 0;
+    padding: 2px 10px;
+    border-radius: 20px;
+    cursor: default;
+    color: @nameColor;
+    font-size: 0.9em;
+    cursor: pointer;
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .cat-active,
+  .cat-active:hover {
+    color: @red;
+    background-color: #fdf5f4;
+  }
+
+  .catsBtn {
+    cursor: pointer;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 1px solid @tipsColor;
+    font-size: 0.95em;
+    &:hover {
+      background-color: @borderColor;
+    }
+  }
+}

@@ -3,30 +3,61 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "@craco/craco": "^5.6.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
+    "@types/qs": "^6.9.5",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "@welldone-software/why-did-you-render": "^5.0.0",
+    "antd": "^4.5.2",
+    "axios": "^0.21.0",
+    "connected-react-router": "^6.8.0",
+    "craco-antd": "^1.19.0",
+    "craco-less": "^1.17.0",
+    "env-cmd": "^10.1.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "history": "^4.7.0",
+    "immutable": "^4.0.0-rc.12",
+    "particles-bg": "^2.5.0",
+    "qs": "^6.9.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-immut": "^3.0.0",
+    "react-lazy-load": "^3.1.13",
+    "react-redux": "^7.2.1",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "redux": "^4.0.5",
+    "redux-actions": "^2.6.5",
+    "redux-immutable": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "nodemon -w craco.config.js --exec \"env-cmd -e development craco start\" --WHY_RENDER",
+    "build": "env-cmd -e production craco build",
+    "test": "craco test"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "plugins": [
+      "react-hooks"
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    }
   },
   "browserslist": {
     "production": [
@@ -39,5 +70,22 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@blueprintjs/core": "^3.35.0",
+    "@types/axios": "^0.14.0",
+    "@types/classnames": "^2.2.11",
+    "@types/immutable": "^3.8.7",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-router-config": "^5.0.1",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/redux-actions": "^2.6.1",
+    "@types/redux-immutable": "^4.0.1",
+    "@types/redux-logger": "^3.0.8",
+    "classnames": "^2.2.6",
+    "env-cmd": "^10.1.0",
+    "http-proxy-middleware": "^1.0.6",
+    "nodemon": "^2.0.6",
+    "qs": "^6.9.4"
   }
 }

@@ -1,0 +1,27 @@
+@import "../../styles/colors.less";
+
+.comp-tabs {
+  display: flex;
+  border-bottom: 1px solid @borderColor;
+
+  &-tab {
+    margin-right: 30px;
+    margin-bottom: -1px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    color: @nameColor;
+
+    &:hover {
+      color: @namehoverColor;
+    }
+  }
+
+  &-tab-active {
+    border-bottom: 2px solid @red;
+    color: @red;
+
+    &:hover {
+      color: @red;
+    }
+  }
+}

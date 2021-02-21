@@ -1,0 +1,39 @@
+@import "../../../../styles/colors.less";
+
+.footer-play-record {
+  width: 350px;
+  height: 350px;
+  box-shadow: 0 0 5px #fff;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+
+.tabs {
+  width: 55%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid @tipsColor;
+  border-radius: 20px;
+
+  .tab {
+    padding: 5px 0;
+    width: 50%;
+    border-radius: 20px;
+    font-size: 0.95em;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @borderColor;
+    }
+  }
+
+  .play-record-active,
+  .play-record-active:hover {
+    color: #fff;
+    background-color: @tipsColor;
+  }
+}

@@ -1,0 +1,28 @@
+@import "../../../styles/colors.less";
+
+.latestmusic {
+  padding: 20px 0 50px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  &-tabs {
+    display: flex;
+  
+    .tab {
+      margin-right: 25px;
+      color: @nameColor;
+      cursor: pointer;
+      &:hover {
+        color: @namehoverColor;
+      }
+    }
+  
+    .active, .active:hover {
+      color: @red;
+    }
+  }
+}

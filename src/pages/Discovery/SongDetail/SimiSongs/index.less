@@ -1,0 +1,45 @@
+@import "../../../../styles/colors.less";
+
+.music-detail-simisongs {
+  .detail-simisongs-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ededed;
+    cursor: default;
+
+    .playIcon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .playIcon {
+      color: @red;
+      cursor: pointer;
+    }
+
+    .name {
+      margin-bottom: 5px;
+    }
+
+    .artists {
+      font-size: 0.9em;
+      color: @tipsColor;
+    }
+
+    &:hover {
+      background-color: @bgColor;
+    }
+
+    .simisongs-cover {
+      position: relative;
+    }
+
+    .simisongs-content {
+      margin-left: 10px;
+    }
+  }
+}

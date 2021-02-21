@@ -1,0 +1,118 @@
+@import "../../../styles/constants.less";
+@import "../../../styles/colors.less";
+
+.layout-header {
+  width: 100%;
+  min-width: @bodyMinWidth;
+  height: @headerHeight;
+  background-color: @greyBg;
+  position: fixed;
+  top: 0;
+  display: flex;
+  z-index: 10;
+
+  &-actions {
+    width: @sidebarWidth;
+    height: 100%;
+    position: relative;
+
+    .layout-header-iconsWrap {
+      display: flex;
+      position: absolute;
+      top: 10px;
+      left: 8px;
+
+      .layout-header-circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        & svg {
+          display: none;
+        }
+      }
+
+      .layout-header-circle:nth-child(1) {
+        background-color: #ff5652;
+      }
+
+      .layout-header-circle:nth-child(2) {
+        background-color: #ffb63c;
+      }
+
+      .layout-header-circle:nth-child(3) {
+        background-color: #00c343;
+      }
+
+      .layout-header-circle:hover svg {
+        display: block;
+      }
+
+      .layout-header-down {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 18px;
+        height: 18px;
+        margin-left: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-backForward {
+    display: flex;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      margin-left: 8px;
+      border-radius: 50%;
+      color: #383838;
+      cursor: pointer;
+
+      span {
+        padding-top: 5px;
+      }
+    }
+
+    div:hover {
+      background-color: #e8e8e8;
+    }
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - @sidebarWidth);
+    padding: 0 20px;
+
+    .layout-header-operations {
+      display: flex;
+      align-items: center;
+    }
+
+    .layout-header-githubLogo {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-left: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-image: url(../../../assets/image/github-logo.png);
+      background-size: 100% 100%;
+      cursor: pointer;
+    }
+  }
+}

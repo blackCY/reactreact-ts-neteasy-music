@@ -1,0 +1,86 @@
+@import "../../../styles/constants.less";
+@import "../../../styles/colors.less";
+
+.footer {
+  width: calc(100% - @sidebarWidth);
+  height: @footerHeight;
+  padding: 10px;
+  position: fixed;
+  margin-left: @sidebarWidth;
+  bottom: 0;
+  border-top: 2px solid rgb(245, 245, 245);
+  display: flex;
+  justify-content: space-between;
+  .primaryColor(0.8);
+  z-index: 10;
+
+  &-progressBar {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 100%;
+  }
+
+  &-songWrap {
+    display: flex;
+    align-items: center;
+
+    .pic {
+      position: relative;
+      cursor: pointer;
+    }
+
+    & img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ccc;
+    }
+
+    &-info {
+      display: flex;
+      align-items: center;
+
+      .name {
+        margin-right: 5px;
+        color: #eee;
+      }
+    }
+
+    & .time {
+      font-size: 0.85em;
+      color: rgb(179, 179, 179);
+    }
+  }
+
+  &-operations {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &-otherOperations {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &-item {
+      margin-left: 15px;
+      color: #888;
+      cursor: pointer;
+      padding-top: 5px;
+      & span:focus {
+        outline: none;
+      }
+    }
+  }
+}

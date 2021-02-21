@@ -1,0 +1,28 @@
+@import "../../../../styles/colors.less";
+
+.music-detail-lyric {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  color: @tipshoverColor;
+  font-size: 0.95em;
+  padding-right: 17px;
+  box-sizing: content-box;
+  box-shadow: 0 1px 5px #fff;
+
+  .line {
+    height: 30px;
+    line-height: 30px;
+    transition: all 0.12s;
+  }
+
+  .lyric-active {
+    font-size: 1.5em;
+    color: @red;
+  }
+
+  .loading {
+    text-align: left;
+  }
+}
